@@ -18,6 +18,21 @@ import TurbolinksPrefetch from 'turbolinks-prefetch';
 TurbolinksPrefetch.start();
 ```
 
+Prefetch request will send `VND.PREFETCH` header, so you may need this to ignore some thing.
+
+For example views count increment:
+
+```rb
+class TopicsController < ApplicationController
+  def show
+    unless request.headers["VND.PREFETCH"].present?
+      # Ignore hit counter for prefetch request
+      @topic.increment_hit
+    end
+  end
+end
+```
+
 ## Demo
 
 <img width="715" alt="截屏2020-09-28 17 17 44" src="https://user-images.githubusercontent.com/5518/94414149-92935b00-01ae-11eb-9916-778d7740db98.png">
