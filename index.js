@@ -72,7 +72,7 @@ function mouseover(event) {
 }
 
 export default class {
-  static init(opts = {}) {
+  static start(opts = {}) {
     hoverTime = opts['delay'] || 50
 
     if (!window.Turbolinks) {

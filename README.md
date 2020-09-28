@@ -15,5 +15,5 @@ import Turbolinks from 'turbolinks';
 window.Turbolinks = Turbolinks;
 
 import TurbolinksPrefetch from 'turbolinks-prefetch';
-TurbolinksPrefetch.init();
+TurbolinksPrefetch.start();
 ```
