@@ -1,0 +1,14 @@
+{
+  "name": "turbolinks-prefetch",
+  "version": "0.1.0",
+  "description": "Turbolinks extends for prefetch links to speeds up your website.",
+  "main": "index.js",
+  "repository": "git@github.com:huacnlee/turbolinks-prefetch.git",
+  "author": "Jason Lee <huacnlee@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4"
+  }
+}
