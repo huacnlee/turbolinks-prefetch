@@ -5,7 +5,7 @@ const xhr = new XMLHttpRequest()
 
 function fetchPage(url, success) {
   xhr.open('GET', url)
-  xhr.setRequestHeader('VND.PREFETCH', 'true')
+  xhr.setRequestHeader('Purpose', 'prefetch')
   xhr.setRequestHeader('Accept', 'text/html')
   xhr.onreadystatechange = () => {
     if (xhr.readyState !== XMLHttpRequest.DONE) return

@@ -18,14 +18,14 @@ import TurbolinksPrefetch from 'turbolinks-prefetch';
 TurbolinksPrefetch.start();
 ```
 
-Prefetch request will send `VND.PREFETCH` header, so you may need this to ignore some thing.
+Prefetch request will send `Purpose: prefetch` header, so you may need this to ignore some thing.
 
 For example views count increment:
 
 ```rb
 class TopicsController < ApplicationController
   def show
-    unless request.headers["VND.PREFETCH"].present?
+    if request.headers["Purpose"] != "prefetch"
       # Ignore hit counter for prefetch request
       @topic.increment_hit
     end
