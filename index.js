@@ -71,10 +71,6 @@ function mouseover(event) {
   fetchers[href] = setTimeout(() => prefetch(href), hoverTime)
 }
 
-const isAction = (action) => {
-  return action == "advance" || action == "replace" || action == "restore"
-}
-
 export default class {
   static start(opts = {}) {
     hoverTime = opts['delay'] || 50
@@ -82,13 +78,6 @@ export default class {
     if (!window.Turbolinks) {
       console.error('window.Turbolinks not found, you must import Turbolinks with global.')
       return
-    }
-
-    // Override Turbolinks method:
-    // https://github.com/turbolinks/turbolinks/blob/v5.3.0-beta.1/src/controller.ts#L312
-    window.Turbolinks.controller.getActionForLink = (link) => {
-      const action = link.getAttribute("data-turbolinks-action")
-      return isAction(action) ? action : "restore"
     }
 
     document.addEventListener('mouseover', mouseover)
