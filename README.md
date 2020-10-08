@@ -2,6 +2,8 @@
 
 Turbolinks extends for prefetch links to speeds up your website.
 
+> NOTE: This npm will change the Turbolinks default visit behavior from `advance` to `restore` for hit cache.
+
 ## Installation
 
 ```bash
