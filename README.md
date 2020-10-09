@@ -53,6 +53,28 @@ class TopicsController < ApplicationController
 end
 ```
 
+### Disable prefetch
+
+By default, TurbolinksPrefetch will enable prefetch for all links.
+
+Except:
+
+- Links not have same host (Origin);
+- Open in new window links `target="_blank"`;
+- The links has `data-remote` attribute;
+- The links has `data-method` attribute;
+- The links has `data-prefetch="false"` attribute;
+
+If you wants disable prefetch, you can do like this:
+
+```html
+<a href="https://google.com">Google</>
+<a href="/topics/123" target="_blank">Open in new window</a>
+<a href="/topics/123" data-method="PUT" data-remote>Put</a>
+<a href="/topics/123" data-method="DELETE">Delete</a>
+<a href="/topics/123" data-prefetch="false">Disable by directly</a>
+```
+
 ## Demo
 
 <img width="715" alt="截屏2020-09-28 17 17 44" src="https://user-images.githubusercontent.com/5518/94414149-92935b00-01ae-11eb-9916-778d7740db98.png">
