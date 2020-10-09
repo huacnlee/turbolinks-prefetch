@@ -1,6 +1,6 @@
 {
   "name": "turbolinks-prefetch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Turbolinks extends for prefetch links to speeds up your website.",
   "main": "index.js",
   "repository": "git@github.com:huacnlee/turbolinks-prefetch.git",

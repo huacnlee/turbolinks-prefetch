@@ -91,7 +91,6 @@ export class Prefetcher {
   prefetched(url) {
     const hasSnapshot = location.href === url || this.controller.cache.has(url)
     const snapshot = this.controller.cache.get(url);
-    console.log('--- prefetched', snapshot);
     return hasSnapshot && snapshot.isFresh
   }
 
