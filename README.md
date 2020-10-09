@@ -2,6 +2,26 @@
 
 Turbolinks extends for prefetch links to speeds up your website.
 
+## WorkFlow
+
+```
+hover --> [prefetch] --<no cache>--> [XHR fetch] -> [Turbolinks cache.put]
+              |
+          <exist cache / in fetching>
+              |
+            ignore
+
+click --<check cache>-- exist --> [isPrefetch] -> [Turbolinks.visit advance] ---> [render page]
+             |                         |                 |
+             |                         |                 --async-> [fetch background] -> [render if updated]
+             |                         |
+             |                       <Yes>
+             |                         |--- [Turbolinks.visit restore] --> render -> nothing
+          No cahce
+             |
+             ---> [Turbolinks.visit]
+```
+
 ## Installation
 
 ```bash
