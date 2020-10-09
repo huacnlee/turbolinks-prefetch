@@ -1,6 +1,8 @@
 # Turbolinks Prefetch
 
-Turbolinks extends for prefetch links to speeds up your website.
+[Turbolinks](https://github.com/turbolinks/turbolinks) extend for prefetch links to speeds up your website.
+
+[中文介绍与说明](https://ruby-china.org/topics/40471)
 
 ## WorkFlow
 
@@ -81,4 +83,7 @@ If you wants disable prefetch, you can do like this:
 
 https://github.com/ruby-china/homeland/commit/e1378468703b8c3cfd7e33a17dc703ff8294a3e9
 
-Visit https://ruby-china.org
+## Demo site
+
+- [Ruby China](https://ruby-china.org)
+- [HackerShare](https://hackershare.dev)
