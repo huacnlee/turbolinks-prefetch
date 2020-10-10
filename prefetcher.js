@@ -41,6 +41,7 @@ export class Prefetcher {
     this.cleanup(event, href)
     if (event.target) {
       event.target.addEventListener('mouseleave', (event) => this.mouseleave(event, href))
+      event.target.addEventListener('mousedown', (event) => this.mouseleave(event, href))
     }
     this.fetchers[href] = setTimeout(() => this.prefetch(href), this.delay)
   }
