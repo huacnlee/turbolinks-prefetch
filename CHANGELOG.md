@@ -1,3 +1,13 @@
+1.0.3
+-----
+
+- Cancel request on mousedown.
+
+1.0.2
+-----
+
+- Ignore links who has `data-method` attribute.
+
 1.0.1
 -----
 
