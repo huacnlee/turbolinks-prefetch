@@ -1,5 +1,7 @@
 # Turbolinks Prefetch
 
+[![](https://img.shields.io/npm/v/turbolinks-prefetch.svg)](https://www.npmjs.com/package/turbolinks-prefetch)
+
 [Turbolinks](https://github.com/turbolinks/turbolinks) extend for prefetch links to speeds up your website.
 
 [中文介绍与说明](https://ruby-china.org/topics/40471)
@@ -33,10 +35,10 @@ $ yarn add turbolinks-prefetch
 ## Usage
 
 ```js
-import Turbolinks from 'turbolinks';
+import Turbolinks from "turbolinks";
 window.Turbolinks = Turbolinks;
 
-import TurbolinksPrefetch from 'turbolinks-prefetch';
+import TurbolinksPrefetch from "turbolinks-prefetch";
 TurbolinksPrefetch.start();
 ```
 
@@ -70,7 +72,7 @@ Except:
 If you wants disable prefetch, you can do like this:
 
 ```html
-<a href="https://google.com">Google</>
+<a href="https://google.com">Google</a>
 <a href="/topics/123" target="_blank">Open in new window</a>
 <a href="/topics/123" data-method="PUT" data-remote>Put</a>
 <a href="/topics/123" data-method="DELETE">Delete</a>
