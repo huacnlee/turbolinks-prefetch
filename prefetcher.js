@@ -30,9 +30,12 @@ export class Prefetcher {
     if (!href) return
     // skip anchor
     if (href.startsWith('#')) return
+    // skip mailto
+    if (href.startsWith('mailto:')) return
+    // skip tel
+    if (href.startsWith('tel:')) return
     // skip outside link
     if (href.includes("://") && !href.startsWith(window.location.origin)) return
-
     if (this.prefetched(href)) return
     if (this.prefetching(href)) return
     this.cleanup(event, href)
