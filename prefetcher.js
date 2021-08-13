@@ -18,7 +18,8 @@ export class Prefetcher {
   }
 
   mouseover(event) {
-    const { target } = event;
+    let { target } = event;
+    if (target instanceof HTMLImageElement) target = target.closest("a")
     if (!target) return
     if (target.hasAttribute('data-remote')) return
     if (target.hasAttribute('data-method')) return
